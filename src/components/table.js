@@ -248,7 +248,7 @@ function EnhancedTableToolbar(props) {
             <>
               {selectall.length}
               {' '}
-              selected from
+              selected from page
               {' '}
               {page}
             </>
@@ -561,8 +561,6 @@ export default function EnhancedTable(props) {
             page={page}
             onPageChange={handleChangePage}
             onRowsPerPageChange={handleChangeRowsPerPage}
-            labelRowsPerPage={<span>Rows:</span>}
-            labelDisplayedRows={({ page }) => `Page: ${page}`}
             backIconButtonProps={{
               color: 'secondary',
             }}
