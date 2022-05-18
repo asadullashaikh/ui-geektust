@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable linebreak-style */
 /* eslint-disable indent */
 /* eslint-disable no-multiple-empty-lines */
@@ -263,14 +264,7 @@ function EnhancedTableToolbar(props) {
 
         </Typography>
       ) : (
-        <Typography
-          sx={{ width: '50%' }}
-          variant="h6"
-          id="tableTitle"
-          component="div"
-        >
-          no row select
-        </Typography>
+        <></>
       )}
 
       {numSelected > 0 ? (
