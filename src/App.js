@@ -1,7 +1,14 @@
-import logo from './logo.svg';
+/* eslint-disable comma-dangle */
+/* eslint-disable import/order */
+/* eslint-disable no-unused-vars */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable jsx-quotes */
+/* eslint-disable quotes */
+/* eslint-disable semi */
+
+import EnhancedTable from './components/table'
+import Edit from './components/edit'
 import './App.css';
-import EnhancedTable from './table'
-import Edit from './edit'
 
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-filename-extension */
@@ -10,11 +17,6 @@ import Edit from './edit'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Checkbox, Button, IconButton } from '@mui/material';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import DeleteIcon from '@mui/icons-material/Delete';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import {
@@ -40,10 +42,10 @@ function App() {
       });
   }, []);
 
-  console.log("data",data)
+  console.log("data", data)
 
   return (
-    <Container maxWidth='md' sx={{mt:5}}>
+    <Container maxWidth='md' sx={{ mt: 5 }}>
       <Typography variant="h3" align="center">Admin UI</Typography>
       <Router>
         <Routes>
