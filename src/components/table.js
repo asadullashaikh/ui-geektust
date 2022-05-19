@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable linebreak-style */
 /* eslint-disable indent */
@@ -44,7 +45,7 @@ import FilterListIcon from '@mui/icons-material/FilterList';
 import { visuallyHidden } from '@mui/utils';
 import { LocalLaundryServiceOutlined } from '@mui/icons-material';
 import Pagination from '@mui/material/Pagination';
-import { useEffect } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
 import EditTwoToneIcon from '@mui/icons-material/EditTwoTone';
 import DeleteOutlineRoundedIcon from '@mui/icons-material/DeleteOutlineRounded';
@@ -304,15 +305,15 @@ export default function EnhancedTable(props) {
     rows, setRows, data1, setData1, setId,
   } = props;
 
-  const [order, setOrder] = React.useState('asc');
-  const [orderBy, setOrderBy] = React.useState('calories');
-  const [selected, setSelected] = React.useState([]);
-  const [page, setPage] = React.useState(0);
-  const [dense, setDense] = React.useState(true);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [selectedrows, setSelectedrows] = React.useState([]);
-  const [selectall, setSelectall] = React.useState([]);
-  const [searchtext, setSearchtext] = React.useState('');
+  const [order, setOrder] = useState('asc');
+  const [orderBy, setOrderBy] = useState('calories');
+  const [selected, setSelected] = useState([]);
+  const [page, setPage] = useState(0);
+  const [dense, setDense] = useState(true);
+  const [rowsPerPage, setRowsPerPage] = useState(10);
+  const [selectedrows, setSelectedrows] = useState([]);
+  const [selectall, setSelectall] = useState([]);
+  const [searchtext, setSearchtext] = useState('');
 
   // console.log("selectall", selectall);
 
@@ -400,7 +401,7 @@ export default function EnhancedTable(props) {
       setSelectall(newSelected);
     } else {
       setSelected(newSelected);
-      setSelectall([]);
+      setSelectall(newSelected);
     }
   };
 
